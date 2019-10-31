@@ -1,0 +1,8 @@
+node_modules
+libs
+sass
+makets
+non_optimized_images
+gulpfile.js
+package-lock.json
+package.json

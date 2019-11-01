@@ -51,7 +51,7 @@
 
     <main class="main-content">
 
-			<section class="news">
+			<section class="news section">
 				<div class="container">
 					<h2 class="news__title">Последние новости</h2>
 					<div class="news__content">
@@ -94,9 +94,46 @@
 				</div>
 			</section>
 
+			<section class="feedback section">
+				<div class="container">
+					<h2 class="feedback__title">Оставьте заявку у нас на сайте</h2>
+					<form class="feedback__form" method="post" action="#">
+						<input type="text" name="name" required placeholder="Ваше ФИО">
+						<input type="tel" name="tel" required placeholder="Ваш телефон">
+						<textarea name="text" placeholder="Ваш комментарий (необязательно)"></textarea>
+						<button class="button feedback__button" type="submit">Отправить</button> 
+					</form>
+				</div>
+			</section>
+
 		</main>
 
-    <footer class="site-footer"></footer>
+    <footer class="footer">
+			<div class="container footer__container">
+				<div class="logo footer__logo">
+					<a href="#">Logo</a>
+				</div>
+				<div class="address footer__address">
+					<img src="img/icon/location.svg" alt="location">
+					<span>г. Брест, ул. Ленина 32/1</span>
+				</div>
+				<div class="phone footer__phone">
+					<img src="img/icon/phone.svg" alt="phone">
+					<div class="phone__numbers">
+						<a href="tel:375295655665"><span>+375 29 </span>565 56 65</a>
+						<a href="tel:375295655665"><span>+375 29 </span>565 56 65</a>
+					</div>
+				</div>
+				<div class="contacts footer__contacts">
+					<ul>
+						<li><a href="#" class="contacts__link"><img src="img/icon/viber.svg" alt="viber"></a></li>
+						<li><a href="#" class="contacts__link"><img src="img/icon/whatsapp.svg" alt="whatsapp"></a></li>
+						<li><a href="#" class="contacts__link"><img src="img/icon/vk.svg" alt="vk"></a></li>
+						<li><a href="#" class="contacts__link"><img src="img/icon/skype.svg" alt="skype"></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 
 		<script src="js/scripts.min.js"></script>
 	</body>

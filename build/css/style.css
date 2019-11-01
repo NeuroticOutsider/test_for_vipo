@@ -1315,6 +1315,15 @@ header, footer, section {
       .news__item:nth-child(odd) .news__item-title {
         margin: 0;
         margin-top: 20px; }
+    .news__item-title a {
+      color: #2f2f2f; }
+    .news__item-title:hover a {
+      color: #EF6058; }
+    .news__item:hover {
+      -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); }
+  .news__image a {
+    display: block; }
   .news__image img {
     border-radius: 10px; }
   .news__item-paragraph {
@@ -1327,7 +1336,12 @@ header, footer, section {
     position: absolute;
     right: 24px;
     bottom: 21px;
-    color: #7368fc; }
+    color: #7368fc;
+    padding: 10px 12px;
+    border: 1px solid transparent; }
+    .news__read-all:hover {
+      border: 1px solid #7368FC;
+      border-radius: 5px; }
 
 @media (max-width: 991px) {
   .news {
@@ -1397,11 +1411,21 @@ header, footer, section {
       height: 60px;
       outline: none;
       padding: 0 15px;
-      border: 0; }
+      border: 0;
+      border: 1px solid #F3F3F3;
+      cursor: pointer; }
+      .feedback__form input:hover, .feedback__form textarea:hover {
+        background-color: #fff; }
+      .feedback__form input:focus, .feedback__form textarea:focus {
+        -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        background-color: #fff; }
     .feedback__form textarea {
       height: 170px;
       resize: none;
       padding: 15px; }
+    .feedback__form .form__input-bg {
+      background-color: #fff; }
   .feedback__button {
     font-size: 18px;
     line-height: 25px;
@@ -1416,6 +1440,23 @@ header, footer, section {
     text-align: center;
     position: relative;
     outline: none; }
+    .feedback__button:hover {
+      -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15); }
+  .feedback .inputError {
+    border: 1px solid #CB2C2C; }
+  .feedback__error-title {
+    display: block;
+    color: #cb2c2c;
+    text-align: center;
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 27px;
+    display: none; }
+    .feedback__error-titleShow {
+      display: block; }
 
 @media (max-width: 1199px) {
   .feedback {

@@ -58,10 +58,12 @@
 
 						<div class="news__item">
 							<div class="news__image">
-								<img src="img/content/men.jpg" alt="men">
+								<a href="#">
+									<img src="img/content/men.jpg" alt="men">
+								</a>
 							</div>
 							<div class="news__info">
-								<h3 class="news__item-title">История успеха: взял кредит на курсы по веб-дизайну</h3>
+								<h3 class="news__item-title"><a href="#">История успеха: взял кредит на курсы по веб-дизайну</a></h3>
 								<div class="news__item-paragraph">
 									<p>
 										Однажды вечером, листая свой инстаграм, он наткнулся на пост, 
@@ -76,10 +78,12 @@
 
 						<div class="news__item">
 							<div class="news__image">
-								<img src="img/content/desktop.jpg" alt="desktop">
+								<a href="#">
+									<img src="img/content/desktop.jpg" alt="desktop">
+								</a>
 							</div>
 							<div class="news__info">
-								<h3 class="news__item-title">История успеха: взял кредит на курсы по веб-дизайну</h3>
+								<h3 class="news__item-title"><a href="#">История успеха: взял кредит на курсы по веб-дизайну</a></h3>
 								<div class="news__item-paragraph">
 									<p>
 										Парень работал консультантом в магазине электроинструмента 
@@ -97,10 +101,11 @@
 			<section class="feedback section">
 				<div class="container">
 					<h2 class="feedback__title">Оставьте заявку у нас на сайте</h2>
+					<h3 class="feedback__error-title">Введите корректные данные</h3>
 					<form class="feedback__form" method="post" action="#">
-						<input type="text" name="name" required placeholder="Ваше ФИО">
-						<input type="tel" name="tel" required placeholder="Ваш телефон">
-						<textarea name="text" placeholder="Ваш комментарий (необязательно)"></textarea>
+						<input id="feedback__name" type="text" name="name" required placeholder="Ваше ФИО">
+						<input id="feedback__phone" type="tel" name="tel" required placeholder="Ваш телефон">
+						<textarea id="feedback__textarea" name="text" placeholder="Ваш комментарий (необязательно)"></textarea>
 						<button class="button feedback__button" type="submit">Отправить</button> 
 					</form>
 				</div>

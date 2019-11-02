@@ -1285,6 +1285,8 @@ header, footer, section {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+  .news__info {
+    padding-bottom: 50px; }
   .news__item {
     -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.06);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.06);
@@ -1318,6 +1320,8 @@ header, footer, section {
     .news__item-title a {
       color: #2f2f2f; }
     .news__item-title:hover a {
+      color: #EF6058; }
+    .news__item-title--red a {
       color: #EF6058; }
     .news__item:hover {
       -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
@@ -1388,6 +1392,8 @@ header, footer, section {
   margin-top: 80px;
   padding-top: 35px;
   padding-bottom: 60px; }
+  .feedback .container {
+    position: relative; }
   .feedback__title {
     margin: auto;
     margin-bottom: 40px;
@@ -1457,6 +1463,56 @@ header, footer, section {
     display: none; }
     .feedback__error-titleShow {
       display: block; }
+
+.request {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 10;
+  display: none; }
+  .request__container {
+    text-align: center; }
+  .request__title {
+    margin-top: 160px;
+    margin-bottom: 140px; }
+  .request__message {
+    max-width: 225px;
+    margin: 0 auto; }
+  .request__button {
+    outline: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: transparent;
+    border: none; }
+    .request__button:after, .request__button:before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 3px;
+      height: 2px;
+      width: 25px;
+      background-color: #8D9293;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .request__button:before {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .request__button:hover:after, .request__button:hover:before {
+      background-color: #000000; }
+  .request--show {
+    display: block; }
 
 @media (max-width: 1199px) {
   .feedback {

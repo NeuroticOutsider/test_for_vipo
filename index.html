@@ -59,7 +59,10 @@
 						<div class="news__item">
 							<div class="news__image">
 								<a href="#">
-									<img src="img/content/men.jpg" alt="men">
+									<picture>
+										<source srcset="img/content/768_photo_1.jpg" media="(max-width: 991px)">
+										<img src="img/content/men.jpg" alt="men">
+									</picture>
 								</a>
 							</div>
 							<div class="news__info">
@@ -100,6 +103,15 @@
 
 			<section class="feedback section">
 				<div class="container">
+
+					<div class="feedback__accepted request">
+						<div class="request__container">
+							<button class="request__button"></button>
+							<h3 class="request__title">Спасибо, ваша заявка принята!</h3>
+							<p class="request__message">Наш менеджер перезвонит вам в рабочее время</p>
+						</div>
+					</div>
+
 					<h2 class="feedback__title">Оставьте заявку у нас на сайте</h2>
 					<h3 class="feedback__error-title">Введите корректные данные</h3>
 					<form class="feedback__form" method="post" action="#">

@@ -15,7 +15,14 @@ $(function() {
 	});
 
 	inputName.bind("change keyup input click", function() {
-		if (this.value.match(/[^а-яА-Яa-zA-Z\s]/g)) {
+		if (inputPhone.hasClass('inputError')) {
+			inputErrorTitle.addClass('feedback__error-titleShow');
+			if (this.value.match(/[^а-яА-Яa-zA-Z\s]/g)) {
+				$(this).addClass('inputError');
+			} else {
+				$(this).removeClass('inputError');
+			}
+		} else if (this.value.match(/[^а-яА-Яa-zA-Z\s]/g)) {
 			$(this).addClass('inputError');
 			inputErrorTitle.addClass('feedback__error-titleShow');
 		} else {
@@ -25,7 +32,14 @@ $(function() {
 	});
 
 	inputPhone.bind("change keyup input click", function() {
-		if (this.value.match(/[^0-9()\-+ ]/g)) {
+		if (inputName.hasClass('inputError')) {
+			inputErrorTitle.addClass('feedback__error-titleShow');
+			if (this.value.match(/[^0-9()\-+ ]/g)) {
+				$(this).addClass('inputError');
+			} else {
+				$(this).removeClass('inputError');
+			}
+		} else if (this.value.match(/[^0-9()\-+ ]/g)) {
 			$(this).addClass('inputError');
 			inputErrorTitle.addClass('feedback__error-titleShow');
 		} else {
@@ -34,10 +48,7 @@ $(function() {
 		}
 	});
 
-	// if (inputName.hasClass('inputError') || inputPhone.hasClass('inputError')) { НЕ РАБОТАЕТ ПОЧЕМУ-ТО
-	// 	console.log("Все фигова!!!");
-	// 	inputErrorTitle.addClass('feedback__error-titleShow');
-	// };
+	//	Unfocus fields event
 
 	function formInputBg (nameInput) {
 		nameInput.on('keyup',function(){
@@ -54,5 +65,42 @@ $(function() {
 	formInputBg (inputName);
 	formInputBg (inputPhone);
 	formInputBg (inputTextarea);
-});
 
+	////////////////////////////////////////////////	
+
+	// Request accept event
+
+	var feedbackSendButton = $(".feedback__button"),
+			 requestBlock = $(".request"),
+			 requestBlockClose = $(".request__button");
+
+	feedbackSendButton.on('click', function(event) {
+		event.preventDefault()
+		if ( (!(inputName.hasClass('inputError')) && !(inputPhone.hasClass('inputError')) ) 
+			&& ( !(inputName.val() === '') && !(inputPhone.val() === '')) ) {
+			requestBlock.addClass('request--show');
+			if ( requestBlock.hasClass('request--show') ) {
+				inputName.val('');
+				inputPhone.val('');
+				inputTextarea.val('');
+			}
+		} else if ( inputName.val() === '' ) {
+				inputName.addClass('inputError');
+				inputErrorTitle.addClass('feedback__error-titleShow');
+			} else if ( inputPhone.val() === '' ) {
+					inputPhone.addClass('inputError');
+					inputErrorTitle.addClass('feedback__error-titleShow');
+				};
+	});
+
+	requestBlockClose.on('click', function() {
+		requestBlock.removeClass('request--show');
+	});
+
+	/////////////////////////////////////////////////
+
+	$('.news__image').hover(function() {
+		$(this).closest('.news__item').find('.news__item-title').toggleClass('news__item-title--red');
+	});
+
+});
